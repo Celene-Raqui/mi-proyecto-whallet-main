@@ -1,0 +1,5 @@
+# Ignorar la carpeta .ide
+.ide/
+
+# Ignorar la carpeta de macOS
+.DS_Store
