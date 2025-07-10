@@ -1,4 +1,32 @@
 
 .ide/
-.DS_Store
+
+# Ignorar configuración del editor
 .vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp
+*.swp
+
+# Archivos de sistema ocultos
+ehthumbs.db
+desktop.ini
+
+# Archivos generados por el navegador
+*.local
+*.bak
+
+# Cache de node o build (si agregas cosas JS más adelante)
+node_modules/
+dist/
+build/
+
+# Archivos personales o sensibles
+.env
+*.env.*
