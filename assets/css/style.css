@@ -79,10 +79,13 @@
     display: flex;
     font-size: 15px;
     word-spacing: 5px;
+    max-width: 95%;
+    padding-left: 80px;
   }
   
   .logo {
-    width: 40px;
+    width: 50px;
+    height: auto;
   }
   
   .nav-links {
@@ -110,6 +113,8 @@
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 10%;
+    max-width: 95%;
+    padding-left: 50px;
   }
   
   .hero-content {
@@ -133,7 +138,7 @@
   }
   
   .hero p {
-    font-size: 1.2rem;
+    font-size: 15px;
     margin-bottom: 2rem;
     color: #767676;
     line-height: 1.2;
@@ -151,6 +156,7 @@
     width: 55%;
     height: auto;
     z-index: 1;
+    margin-top: -120px;
   }
   
   .imagen-encima {
@@ -160,6 +166,7 @@
     width: 60%;
     height: auto;
     z-index: 2;
+    margin-top: -120px;
   }
   
   /* Eliminar restricción innecesaria que distorsiona tamaños */
@@ -196,9 +203,9 @@
   .features {
     background-color: #000;
     color: white;
-    border-radius: 40px;
-    padding: 60px 20px;
-    max-width: 1100px;
+    border-radius: 20px;
+    padding: 60px 35px;
+    max-width: 1080px;
     height: 500px;
     margin: 0 auto;
     text-align: left;
@@ -229,8 +236,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.288);
     padding: 1.5rem;
     flex: 1;
     width: 314.66px;
@@ -318,8 +325,10 @@
   
   /* ======= SECURITY ======= */
   .security {
-    max-width: 1200px;
-    margin-left: 16%;
+    max-width: 95%;
+    padding-left: 10%;
+    margin-left: 180px;
+    margin-right: 15%;
     margin-top: 10%;
     padding: 80px 20px;
     display: flex;
@@ -329,14 +338,15 @@
   }
   
   .celular img {
-    max-width: 350px;
+    max-width: 300px;
+    margin-left: 55px;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
   
   .informacion {
-    max-width: 600px;
+    max-width: 50%;
   }
   
   .informacion h1 {
@@ -717,13 +727,63 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 8rem;
     padding: 4rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 95%;
+    /* margin: 0 auto; */
+    margin-left: 150px;
     flex-wrap: wrap;
   }
   
+  .faq-toggle {
+  display: none;
+}
+
+.faq-item {
+  border-top: 1px solid #e4e4e4;
+  padding: 1.5rem 0;
+}
+
+/* Pregunta como botón */
+.faq-question {
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+
+/* Agrega símbolo "+" por defecto */
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 1.5rem;
+  color: #1e2530;
+}
+
+/* Cuando el checkbox está marcado, cambia a "–" */
+.faq-toggle:checked + .faq-question::after {
+  content: "–";
+}
+
+/* Respuesta oculta por defecto */
+.faq-answer {
+  margin-top: 1rem;
+  color: #56616f;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  display: none;
+}
+
+/* Mostrar respuesta si el toggle está activado */
+.faq-toggle:checked + .faq-question + .faq-answer {
+  display: block;
+}
+
   .faq-left {
     flex: 1;
     max-width: 520px;
@@ -787,14 +847,13 @@
   .faq-right {
     flex: 1;
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     min-width: 250px;
   }
   
   .faq-right img {
-    max-width: 310px;
-    height: auto;
+    max-width: 300px;
+    height: 550px;
     object-fit: contain;
   }
   
@@ -829,8 +888,8 @@
     justify-content: center;
     align-items: center;
     background-color: #000;
-    border-radius: 40px;
-    margin: 100px auto;
+    border-radius: 20px;
+    margin: 100px 160px;
     padding: 40px 20px;
     max-width: 1200px;
     flex-wrap: wrap;
@@ -846,7 +905,7 @@
   
   .mockup-img {
     position: absolute;
-    width: 300px;
+    width: 290px;
     height: 550px;
     border-radius: 30px;
   }
@@ -854,7 +913,8 @@
   .promo-content {
     flex: 1 1 400px;
     color: #ffffff;
-    padding: 20px 40px;
+    padding: 20px 0px;
+    margin-right: 50px;
     text-align: left;
   }
   
