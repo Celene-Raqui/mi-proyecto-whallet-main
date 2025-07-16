@@ -25,8 +25,6 @@
     padding: 0;
     line-height: 1.6;
   }
-
-  
   
   /* ======= UTILIDADES ======= */
   .container {
@@ -78,11 +76,14 @@
   }
   
   .navbar .container {
-    display: flex;
+        display: flex
+;
     font-size: 15px;
     word-spacing: 5px;
     max-width: 95%;
-    padding-left: 80px;
+    align-content: stretch;
+    justify-content: flex-start;
+    padding-left: 70px;
   }
   
   .logo {
@@ -95,12 +96,6 @@
     display: flex;
     gap: 2rem;
   }
-  
-  /*.nav-links a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: 500;
-  }*/
   
   .nav-links a:hover {
     color: var(--primary-color);
@@ -439,9 +434,6 @@
       max-width: 90%;
     }
   }
-
-  /* ======= MIGRACIÓN ======= */
-
 .seccion-migracion{
   height: auto;
   max-width: 100%;
@@ -886,45 +878,6 @@
       max-width: 220px;
     }
   }
-  @media screen and (max-width: 768px) {
-  .faq-section {
-    flex-direction: column;
-    margin-left: 0;
-    padding: 2rem 1rem;
-    gap: 3rem;
-  }
-
-  .faq-left {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  .faq-left h1 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-
-  .faq-left p {
-    font-size: 1rem;
-  }
-
-  .faq-question {
-    font-size: 1rem;
-    padding-right: 1.5rem;
-  }
-
-  .faq-right {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .faq-right img {
-    width: 60%;
-    max-width: 200px;
-    height: auto;
-  }
-}
-
   
   /* ======= DOWNLOAD ======= */
   .promo-section {
@@ -988,41 +941,37 @@
   .store-buttons img:hover {
     transform: scale(1.05);
   }
-  
-  @media screen and (max-width: 768px) {
+
+  @media (max-width: 768px) {
   .promo-section {
     flex-direction: column;
-    margin: 40px 20px;
+    margin: 50px 20px;
     padding: 20px;
     text-align: center;
   }
 
-  .mockup-container {
-    margin-bottom: 30px;
-    position: relative;
-  }
-
   .mockup-img {
-  position: relative;
-  width: 70%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 20px;
-}
+    position: static;
+    width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+  }
 
   .promo-content {
     margin: 0;
     padding: 0;
-    text-align: center;
   }
 
   .promo-content h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .promo-content p {
+    font-size: 0.95rem;
   }
 
   .store-buttons {
     justify-content: center;
-    gap: 10px;
   }
 
   .store-buttons img {
@@ -1030,7 +979,7 @@
   }
 }
 
-
+  
   /* ======= FOOTER ======= */
   .footer {
     text-align: center;
@@ -1123,65 +1072,52 @@
     from {transform: translateX(50px); opacity: 0;}
     to {transform: translateX(0); opacity: 1;}
   }
+  
 
-/*        RESPONSIVE CSS       */
-/* =========================== */
-@media screen and (max-width: 768px) {
-  .container {
-    width: 95%;
-    padding: 0 1rem;
-  }
 
-  .navbar {
-    text-align: center;
-    padding: 1rem 0;
-  }
+/* === Alineación con Flexbox === */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-  .navbar img.logo {
-    max-width: 100px;
-    margin-bottom: 0.5rem;
-  }
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  text-align: left;
+}
 
-  .hero h1 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-    text-align: center;
-  }
-
-  .hero p {
-    text-align: center;
-    font-size: 1rem;
-    padding: 0 0.5rem;
-  }
-
+/* === Diseño Responsive === */
+@media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    text-align: center;
   }
 
-  .btn,
-  .btn-primary {
-    display: block;
-    width: 100%;
+  .container {
+    flex-direction: column;
     padding: 1rem;
-    text-align: center;
-    margin: 0.5rem 0;
   }
 
-  img {
+  .hero-content .text,
+  .hero-content img {
     max-width: 100%;
-    height: auto;
+    width: 100%;
   }
 
-  .text {
-    text-align: center;
-  }
-
-  .section,
-  .columns,
-  .row {
+  header.navbar .container {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 120px;
+    height: auto;
   }
 }
